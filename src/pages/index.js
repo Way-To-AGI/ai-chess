@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ChessGame from "@/components/ChessGame";
+import ChessGame from "@/components/ChessGame.jsx";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {

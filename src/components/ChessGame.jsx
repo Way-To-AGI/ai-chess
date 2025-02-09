@@ -204,7 +204,7 @@ const ChessGame = () => {
           className={styles.resetButton}
           onClick={resetGame}
         >
-          Reset
+          Reset1
         </button>
       </div>
 
