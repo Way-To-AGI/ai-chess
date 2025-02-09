@@ -27,7 +27,7 @@ This is an AI-based chess game where players can compete against an AI. The proj
 ## 安装步骤
 1. 克隆项目
    ```bash
-   git clone https://github.com/yourusername/ai-chess.git
+   git clone https://github.com/Mrdapeng/ai-chess
    ```
 2. 进入项目目录
    ```bash
@@ -43,7 +43,7 @@ This is an AI-based chess game where players can compete against an AI. The proj
 ## Installation Steps
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/ai-chess.git
+   git clone https://github.com/Mrdapeng/ai-chess
    ```
 2. Navigate to the project directory
    ```bash
