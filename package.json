@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "vercel-build": "next build"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -15,7 +16,9 @@
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-chessboard": "^4.7.2",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^9.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
