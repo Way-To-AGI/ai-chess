@@ -74,8 +74,9 @@ const ChessGame = () => {
       const player = game.turn() === 'w' ? 'white' : 'black';
       setCurrentPlayer(player);
 
-      // 检查是否已经是终局
-      if (updateGameStatus()) {
+      // 检查游戏是否结束
+      if (game.isGameOver()) {
+        updateGameStatus();
         return;
       }
 
@@ -100,7 +101,7 @@ const ChessGame = () => {
     } catch (error) {
       console.error('Error making move:', error);
       setError(`Error: ${error.message}`);
-      setGameState(GAME_STATE.FINISHED);
+      setGameState(GAME_STATE.PAUSED);  // 改为PAUSED而不是FINISHED，让用户可以继续
     } finally {
       setIsThinking(false);
     }
@@ -163,7 +164,7 @@ const ChessGame = () => {
       <div className={styles.gameContainer}>
         <div className={styles.gameControls}>
           <input
-            type="text"
+            type="password"
             placeholder="Enter OpenRouter API Key"
             value={apiKey}
             onChange={(e) => setApiKey(e.target.value)}
