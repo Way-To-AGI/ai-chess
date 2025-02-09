@@ -161,80 +161,76 @@ const ChessGame = () => {
 
   return (
     <div className={styles.chessGame}>
+      <div className={styles.controlsContainer}>
+        <input
+          type="password"
+          placeholder="Enter OpenRouter API Key"
+          value={apiKey}
+          onChange={(e) => setApiKey(e.target.value)}
+        />
+        <select
+          value={models.white}
+          onChange={(e) => setModels(prev => ({ ...prev, white: e.target.value }))}
+        >
+          <option value="anthropic/claude-3-sonnet">Claude 3 Sonnet</option>
+          <option value="deepseek/deepseek-chat:free">Deepseek</option>
+          <option value="google/gemini-pro">Gemini Pro</option>
+          <option value="meta-llama/llama-2-70b-chat">Llama 2</option>
+        </select>
+        <select
+          value={models.black}
+          onChange={(e) => setModels(prev => ({ ...prev, black: e.target.value }))}
+        >
+          <option value="anthropic/claude-3-sonnet">Claude 3 Sonnet</option>
+          <option value="deepseek/deepseek-chat:free">Deepseek</option>
+          <option value="google/gemini-pro">Gemini Pro</option>
+          <option value="meta-llama/llama-2-70b-chat">Llama 2</option>
+        </select>
+        <button
+          className={styles.startButton}
+          onClick={() => setGameState(GAME_STATE.PLAYING)}
+          disabled={gameState === GAME_STATE.PLAYING || !apiKey}
+        >
+          Start
+        </button>
+        <button
+          className={styles.pauseButton}
+          onClick={() => setGameState(GAME_STATE.PAUSED)}
+          disabled={gameState !== GAME_STATE.PLAYING}
+        >
+          Pause
+        </button>
+        <button 
+          className={styles.resetButton}
+          onClick={resetGame}
+        >
+          Reset
+        </button>
+      </div>
+
       <div className={styles.gameContainer}>
-        <div className={styles.gameControls}>
-          <input
-            type="password"
-            placeholder="Enter OpenRouter API Key"
-            value={apiKey}
-            onChange={(e) => setApiKey(e.target.value)}
+        <div className={styles.boardContainer}>
+          <Chessboard
+            position={game.fen()}
+            onPieceDrop={onDrop}
+            boardWidth={600}
           />
-          <select
-            value={models.white}
-            onChange={(e) => setModels(prev => ({ ...prev, white: e.target.value }))}
-          >
-            <option value="anthropic/claude-3-sonnet">Claude 3 Sonnet</option>
-            <option value="deepseek/deepseek-chat:free">Deepseek</option>
-            <option value="google/gemini-pro">Gemini Pro</option>
-            <option value="meta-llama/llama-2-70b-chat">Llama 2</option>
-          </select>
-          <select
-            value={models.black}
-            onChange={(e) => setModels(prev => ({ ...prev, black: e.target.value }))}
-          >
-            <option value="anthropic/claude-3-sonnet">Claude 3 Sonnet</option>
-            <option value="deepseek/deepseek-chat:free">Deepseek</option>
-            <option value="google/gemini-pro">Gemini Pro</option>
-            <option value="meta-llama/llama-2-70b-chat">Llama 2</option>
-          </select>
-          <button
-            onClick={() => setGameState(GAME_STATE.PLAYING)}
-            disabled={gameState === GAME_STATE.PLAYING || !apiKey}
-          >
-            Start
-          </button>
-          <button
-            onClick={() => setGameState(GAME_STATE.PAUSED)}
-            disabled={gameState !== GAME_STATE.PLAYING}
-          >
-            Pause
-          </button>
-          <button onClick={resetGame}>Reset</button>
         </div>
 
-        <div className={styles.mainContent}>
-          <div className={styles.boardSection}>
-            <Chessboard
-              position={game.fen()}
-              onPieceDrop={onDrop}
-              boardWidth={600}
-              customBoardStyle={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                width: '100%',
-                height: '100%'
-              }}
-            />
-          </div>
-
-          <div className={styles.gameInfo}>
-            <div className={styles.statusSection}>
-              <h3>Game Status</h3>
-              {isThinking && <p className={styles.thinking}>AI is thinking</p>}
-              {error && <p className={styles.error}>{error}</p>}
-              {gameStatus && <p className={styles.gameStatus}>{gameStatus}</p>}
-              <p>Current Player: {currentPlayer}</p>
-            </div>
-
-            <div className={styles.moveHistory} ref={moveHistoryRef}>
-              <h3>Move History</h3>
-              {moveHistory.map((move, index) => (
-                <div key={index} className={styles.moveEntry}>
-                  {`${index + 1}. ${move}`}
-                </div>
-              ))}
-            </div>
+        <div className={styles.gameInfo}>
+          <h3>Game Status</h3>
+          {isThinking && <p className={styles.thinking}>AI is thinking</p>}
+          {error && <p className={styles.error}>{error}</p>}
+          {gameStatus && <p className={styles.gameStatus}>{gameStatus}</p>}
+          <p>Current Player: {currentPlayer}</p>
+          
+          <div className={styles.moveHistory}>
+            <h3>Move History</h3>
+            {moveHistory.map((move, index) => (
+              <div key={index} className={styles.moveEntry}>
+                {`${index + 1}. ${move}`}
+              </div>
+            ))}
           </div>
         </div>
       </div>
