@@ -16,11 +16,31 @@
   font-family: var(--font-geist-sans);
 }
 
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .main ol {
