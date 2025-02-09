@@ -2,74 +2,79 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 项目简介
+## README.md
 
-这是一个基于AI的国际象棋游戏，玩家可以与AI对战。项目使用`chess.js`库处理棋局逻辑，并通过OpenRouter API获取AI的移动建议。
+- [中文](README_zh.md)
+- [English](README.md)
 
-## 主要功能
+## Project Overview
 
-- 🎮 与AI对战
-- 📜 移动历史记录
-- 🤖 支持多种AI模型
-- 🌐 响应式界面设计
+This is an AI-powered chess game where players can compete against an AI opponent. The project utilizes the `chess.js` library for game logic and the OpenRouter API for AI move suggestions.
 
-## 快速开始
+## Key Features
 
-### 环境要求
+- 🎮 Play against AI
+- 📜 Move history tracking
+- 🤖 Support for multiple AI models
+- 🌐 Responsive UI design
+
+## Quick Start
+
+### Prerequisites
 
 - Node.js 16+
 - npm 7+
 
-### 安装步骤
+### Installation
 
 ```bash
-# 克隆项目
+# Clone the repository
 git clone https://github.com/Mrdapeng/ai-chess.git
 
-# 进入项目目录
+# Navigate to the project directory
 cd ai-chess
 
-# 安装依赖
+# Install dependencies
 npm install
 ```
 
-### 运行项目
+### Running the Project
 
 ```bash
-# 启动开发服务器
+# Start the development server
 npm run dev
 ```
 
-打开浏览器访问 [http://localhost:3000](http://localhost:3000) 即可开始游戏。
+Open your browser and visit [http://localhost:3000](http://localhost:3000) to start playing.
 
-## 项目结构
+## Project Structure
 
 ```
 ai-chess/
-├── src/               # 源代码目录
-├── public/            # 静态资源
-├── package.json       # 项目依赖
-├── LICENSE            # 许可证文件
-└── README.md          # 项目说明
+├── src/               # Source code
+├── public/            # Static assets
+├── package.json       # Project dependencies
+├── LICENSE            # License file
+└── README.md          # Project documentation
 ```
 
-## 如何贡献
+## Contributing
 
-我们欢迎任何形式的贡献！请遵循以下步骤：
+We welcome contributions of all kinds! Please follow these steps:
 
-1. Fork 本项目
-2. 创建您的特性分支 (`git checkout -b feature/YourFeature`)
-3. 提交您的更改 (`git commit -m 'Add some feature'`)
-4. 推送到分支 (`git push origin feature/YourFeature`)
-5. 创建一个 Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
 
-请确保您的代码遵循项目代码风格，并通过所有测试。
+Please ensure your code follows the project's coding style and passes all tests.
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证 - 详情请查看 [LICENSE](LICENSE) 文件。
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 致谢
+## Acknowledgments
 
-- [chess.js](https://github.com/jhlywa/chess.js) - 国际象棋逻辑库
-- OpenRouter API - AI 移动建议
+- [chess.js](https://github.com/jhlywa/chess.js) - Chess logic library
+- OpenRouter API - AI move suggestions
