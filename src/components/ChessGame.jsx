@@ -28,7 +28,7 @@ const ChessGame = () => {
   // 设置默认模型
   const [models, setModels] = useState({
     white: 'anthropic/claude-3-sonnet',
-    black: 'deepseek/deepseek-r1-distill-llama-8b'
+    black: 'deepseek/deepseek-chat:free'
   });
 
   // 重置游戏
@@ -174,7 +174,7 @@ const ChessGame = () => {
             onChange={(e) => setModels(prev => ({ ...prev, white: e.target.value }))}
           >
             <option value="anthropic/claude-3-sonnet">Claude 3 Sonnet</option>
-            <option value="deepseek/deepseek-r1-distill-llama-8b">Deepseek</option>
+            <option value="deepseek/deepseek-chat:free">Deepseek</option>
             <option value="google/gemini-pro">Gemini Pro</option>
             <option value="meta-llama/llama-2-70b-chat">Llama 2</option>
           </select>
@@ -183,7 +183,7 @@ const ChessGame = () => {
             onChange={(e) => setModels(prev => ({ ...prev, black: e.target.value }))}
           >
             <option value="anthropic/claude-3-sonnet">Claude 3 Sonnet</option>
-            <option value="deepseek/deepseek-r1-distill-llama-8b">Deepseek</option>
+            <option value="deepseek/deepseek-chat:free">Deepseek</option>
             <option value="google/gemini-pro">Gemini Pro</option>
             <option value="meta-llama/llama-2-70b-chat">Llama 2</option>
           </select>
