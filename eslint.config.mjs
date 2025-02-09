@@ -7,8 +7,22 @@ const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
+  recommendedConfig: {
+    env: {
+      es2021: true,
+      node: true,
+    },
+  },
 });
 
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals"),
+  {
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+    rules: {
+      // 可以根据需要添加或修改规则
+    },
+  },
+];
 
 export default eslintConfig;

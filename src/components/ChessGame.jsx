@@ -208,6 +208,13 @@ const ChessGame = () => {
               position={game.fen()}
               onPieceDrop={onDrop}
               boardWidth={600}
+              customBoardStyle={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%',
+                height: '100%'
+              }}
             />
           </div>
 

@@ -1,6 +1,6 @@
 .chessGame {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 1rem;
   background: #ffffff;
@@ -21,7 +21,7 @@
 
 .gameControls {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   background: #ffffff;
   padding: 1.5rem;
   border-radius: 16px;
@@ -112,16 +112,21 @@
   gap: 2rem;
   align-items: flex-start;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .boardSection {
-  background: #ffffff;
   padding: 2rem;
   border-radius: 16px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  background: #ffffff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid #e5e7eb;
-  flex: 1;
 }
 
 .gameInfo {
@@ -129,7 +134,7 @@
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  width: 300px;
+  width: 400px;
   border: 1px solid #e5e7eb;
   align-self: stretch;
 }
@@ -216,7 +221,7 @@
 }
 
 /* Responsive design */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .mainContent {
     flex-direction: column;
     align-items: center;
