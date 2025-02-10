@@ -9,11 +9,11 @@
 
 ## Project Overview
 
-This is an AI-powered chess game where players can compete against an AI opponent. The project utilizes the `chess.js` library for game logic and the OpenRouter API for AI move suggestions.
+This is an AI - vs - AI chess game with two large - scale models competing. The project uses the chess.js library for game logic and integrates the OpenRouter API for the models to generate move suggestions, creating an exciting algorithmic battle.
 
 ## Key Features
 
-- 🎮 Play against AI
+- 🎮 AI VS AI chess 
 - 📜 Move history tracking
 - 🤖 Support for multiple AI models
 - 🌐 Responsive UI design
