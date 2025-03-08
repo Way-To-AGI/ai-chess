@@ -29,7 +29,7 @@ This is an AI-powered chess game where players can compete against an AI opponen
 
 ```bash
 # Clone the repository
-git clone https://github.com/Mrdapeng/ai-chess.git
+git clone https://github.com/Way-To-AGI/ai-chess.git
 
 # Navigate to the project directory
 cd ai-chess

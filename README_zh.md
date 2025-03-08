@@ -24,7 +24,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/Mrdapeng/ai-chess.git
+git clone https://github.com/Way-To-AGI/ai-chess.git
 
 # 进入项目目录
 cd ai-chess
